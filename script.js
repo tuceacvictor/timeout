@@ -1,4 +1,4 @@
-const leaveDate = new Date('02-05-2024 18:00')
+const leaveDate = new Date('2024-02-05T18:00:00.000')
 
 const locales = {
     days: ["День", "Дней"],
@@ -25,6 +25,7 @@ function dhm(ms) {
 
 setInterval(() => {
     const ramaining = leaveDate.getTime() - new Date().getTime();
+    
     const v = dhm(ramaining);
 
     const timer = document.getElementById("timer");
